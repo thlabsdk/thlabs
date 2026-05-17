@@ -8,6 +8,9 @@ export type Project = {
   visibility: ProjectVisibility
   status: ProjectStatus
   href: string
+  summary?: string
+  stack?: string[]
+  externalUrl?: string | null
 }
 
 export const PROJECTS: Project[] = [
@@ -17,7 +20,11 @@ export const PROJECTS: Project[] = [
     description: 'Public shell, auth gateway, and project index.',
     visibility: 'public',
     status: 'live',
-    href: 'https://thlabs.dk',
+    href: '/projects/thlabs',
+    summary:
+      'Minimal software lab and project index for experimental systems, tools, and private infrastructure.',
+    stack: ['Next.js', 'Supabase', 'Vercel'],
+    externalUrl: 'https://thlabs.dk',
   },
   {
     name: 'Sea Trout Log',
@@ -26,6 +33,10 @@ export const PROJECTS: Project[] = [
     visibility: 'private',
     status: 'development',
     href: '/projects/sea-trout-log',
+    summary:
+      'Private catch logging system for sea trout fishing. Captures GPS coordinates, catch data, water conditions, and tide information per session. Designed as a structured field record — not a social tool.',
+    stack: ['Next.js', 'Supabase', 'PostgreSQL', 'PostGIS'],
+    externalUrl: null,
   },
 ]
 

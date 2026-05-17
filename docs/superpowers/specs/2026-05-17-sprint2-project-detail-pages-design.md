@@ -34,6 +34,25 @@ export type Project = {
 
 `visibility` drives both list-view filtering (existing) and detail-page access gating (new). No additional field needed.
 
+### THLabs registry entry
+
+```ts
+{
+  name: 'THLabs',
+  slug: 'thlabs',
+  description: 'Public shell, auth gateway, and project index.',
+  visibility: 'public',
+  status: 'live',
+  href: '/projects/thlabs',
+  summary:
+    'Minimal software lab and project index for experimental systems, tools, and private infrastructure.',
+  stack: ['Next.js', 'Supabase', 'Vercel'],
+  externalUrl: 'https://thlabs.dk',
+}
+```
+
+Note: `href` changes from `'https://thlabs.dk'` to `'/projects/thlabs'` so the project list links to the internal detail page. The external URL is captured in `externalUrl` instead.
+
 ### Sea Trout Log registry entry
 
 ```ts
@@ -154,5 +173,5 @@ Middleware runs on every request and is harder to reason about than page-level c
 
 | File | Change |
 |------|--------|
-| `lib/projects.ts` | Add `summary`, `stack`, `externalUrl` fields; update Sea Trout Log entry |
+| `lib/projects.ts` | Add `summary`, `stack`, `externalUrl` fields; update THLabs and Sea Trout Log entries; update THLabs `href` to `/projects/thlabs` |
 | `app/projects/[slug]/page.tsx` | New — dynamic route, auth gate, detail page |

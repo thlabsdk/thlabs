@@ -11,7 +11,8 @@
       "Bash(Select-Object -ExpandProperty FullName)",
       "Skill(superpowers:executing-plans)",
       "Bash(git add *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(git *)"
     ]
   }
 }
