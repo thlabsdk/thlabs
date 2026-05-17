@@ -4,7 +4,8 @@
       "Bash(Get-ChildItem *)",
       "PowerShell(head *)",
       "Bash(xargs grep -l \"middleware\")",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Skill(superpowers:brainstorming)"
     ]
   }
 }
