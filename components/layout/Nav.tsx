@@ -1,17 +1,12 @@
-"use client";
+import Link from 'next/link'
+import { createClient } from '@/lib/supabase/server'
+import { Container } from './Container'
+import { NavLinks } from './NavLinks'
+import { NavAuthSection } from './NavAuthSection'
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Container } from "./Container";
-
-const links = [
-  { href: "/about", label: "About" },
-  { href: "/projects", label: "Projects" },
-  { href: "/contact", label: "Contact" },
-];
-
-export function Nav() {
-  const pathname = usePathname();
+export async function Nav() {
+  const supabase = await createClient()
+  const { data: { user } } = await supabase.auth.getUser()
 
   return (
     <header className="border-b border-border">
@@ -23,27 +18,12 @@ export function Nav() {
           >
             THLabs
           </Link>
-          <ul className="flex items-center gap-8">
-            {links.map(({ href, label }) => {
-              const isActive = pathname === href;
-              return (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    className={`text-sm transition-colors duration-150 ${
-                      isActive
-                        ? "text-foreground"
-                        : "text-muted hover:text-foreground"
-                    }`}
-                  >
-                    {label}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+          <div className="flex items-center gap-8">
+            <NavLinks />
+            <NavAuthSection userEmail={user?.email ?? null} />
+          </div>
         </nav>
       </Container>
     </header>
-  );
+  )
 }
