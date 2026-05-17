@@ -1,7 +1,7 @@
 import { createClient } from '@/lib/supabase/server'
 import { Container } from '@/components/layout/Container'
 import LoginForm from './LoginForm'
-import LogoutButton from './LogoutButton'
+import LogoutButton from '@/components/layout/LogoutButton'
 
 export default async function LoginPage() {
   const supabase = await createClient()
