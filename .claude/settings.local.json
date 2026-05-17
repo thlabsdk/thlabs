@@ -5,7 +5,8 @@
       "PowerShell(head *)",
       "Bash(xargs grep -l \"middleware\")",
       "Bash(npx tsc *)",
-      "Skill(superpowers:brainstorming)"
+      "Skill(superpowers:brainstorming)",
+      "Bash(npm run *)"
     ]
   }
 }

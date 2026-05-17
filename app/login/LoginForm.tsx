@@ -7,18 +7,30 @@ export default function LoginForm() {
   const [email, setEmail] = useState('')
   const [sent, setSent] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setLoading(true)
+    setSent(false)
+    setError(null)
     const supabase = createClient()
-    await supabase.auth.signInWithOtp({
+    const { error } = await supabase.auth.signInWithOtp({
       email,
       options: {
         emailRedirectTo: `${window.location.origin}/auth/callback`,
+        shouldCreateUser: false,
       },
     })
-    setSent(true)
+    if (error) {
+      setError(
+        error.status === 429
+          ? 'Too many login attempts.\nPlease wait a moment before trying again.'
+          : 'Access is restricted.'
+      )
+    } else {
+      setSent(true)
+    }
     setLoading(false)
   }
 
@@ -54,6 +66,13 @@ export default function LoginForm() {
       >
         {loading ? 'Sending...' : 'Send magic link'}
       </button>
+      {error && (
+        <div className="flex flex-col gap-0.5">
+          {error.split('\n').map((line, i) => (
+            <p key={i} className="text-sm text-muted">{line}</p>
+          ))}
+        </div>
+      )}
     </form>
   )
 }
