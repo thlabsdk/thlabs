@@ -14,7 +14,8 @@
       "Bash(git commit *)",
       "Bash(git *)",
       "Bash(node *)",
-      "Skill(superpowers:requesting-code-review)"
+      "Skill(superpowers:requesting-code-review)",
+      "Skill(superpowers:subagent-driven-development)"
     ]
   }
 }
