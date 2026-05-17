@@ -36,7 +36,7 @@ export const PROJECTS: Project[] = [
     summary:
       'Private catch logging system for sea trout fishing. Captures GPS coordinates, catch data, water conditions, and tide information per session. Designed as a structured field record — not a social tool.',
     stack: ['Next.js', 'Supabase', 'PostgreSQL', 'PostGIS'],
-    externalUrl: null,
+    externalUrl: 'https://trout.thlabs.dk',
   },
 ]
 
