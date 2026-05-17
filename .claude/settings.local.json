@@ -6,7 +6,12 @@
       "Bash(xargs grep -l \"middleware\")",
       "Bash(npx tsc *)",
       "Skill(superpowers:brainstorming)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Skill(superpowers:writing-plans)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Skill(superpowers:executing-plans)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
     ]
   }
 }
