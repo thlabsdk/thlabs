@@ -94,9 +94,13 @@ Responsibilities: refresh auth session cookie on every request; redirect unauthe
 
 ```ts
 export const config = {
-  matcher: ['/((?!_next/static|_next/image|favicon.ico).*)'],
+  matcher: [
+    '/((?!_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)',
+  ],
 }
 ```
+
+Excludes Next.js internals (`_next/static`, `_next/image`), `favicon.ico`, and common static resources (`robots.txt`, `sitemap.xml`) to avoid unnecessary auth checks or redirect edge cases on non-app resources.
 
 No role logic. No permissions. No feature flags. No abstractions for future auth complexity.
 
@@ -106,7 +110,9 @@ No role logic. No permissions. No feature flags. No abstractions for future auth
 
 ### Login page (`app/login/page.tsx`)
 
-Client component. Renders a restrained, centered auth surface — not a card, not a product UI. Flat, bordered, minimal width.
+Server component. On render, checks the current session via the SSR auth client. If a valid session exists → `redirect('/')`. This keeps the login surface coherent with the fully gated middleware model and avoids showing auth UI to already-authenticated users. No conditional messaging, no account UI.
+
+Otherwise, renders a restrained, centered auth surface — not a card, not a product UI. Flat, bordered, minimal width. The magic-link send form is a nested client component.
 
 Structure:
 - App name in mono (`Sea Trout Log` / `Havørredloggen`)
