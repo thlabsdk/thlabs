@@ -11,7 +11,7 @@
 | System | URL | Platform | Status |
 |--------|-----|----------|--------|
 | THLabs | `thlabs.dk` | Vercel | Live |
-| Sea Trout Log | `trout.thlabs.dk` | Vercel | Pending confirmation |
+| Sea Trout Log | `trout.thlabs.dk` | Vercel | Live |
 
 Both are separate Vercel projects with independent build pipelines, environment variables, and deployment lifecycles.
 
@@ -70,7 +70,7 @@ Registry source of truth: `lib/projects.ts`
 | Name | Slug | Visibility | Status | External URL |
 |------|------|-----------|--------|-------------|
 | THLabs | `thlabs` | public | live | `https://thlabs.dk` |
-| Sea Trout Log | `sea-trout-log` | private | development | `https://trout.thlabs.dk` |
+| Sea Trout Log | `sea-trout-log` | private | live | `https://trout.thlabs.dk` |
 
 ---
 
@@ -112,6 +112,4 @@ _None currently open._
 
 ## Immediate Technical Priorities
 
-1. Confirm `trout.thlabs.dk` is live and operational
-2. Update Sea Trout Log `status: 'development'` → `'live'` in `lib/projects.ts`
-3. Continue Sea Trout Log feature development in `havorred-log`
+1. Continue Sea Trout Log feature development in `havorred-log`

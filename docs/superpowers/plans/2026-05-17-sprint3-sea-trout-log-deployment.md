@@ -829,36 +829,34 @@ These steps happen outside the codebase after the code is complete:
 
 ## Verification Record
 
-**Verified:** —
-**Verified by:** —
-**Environment:** —
-**Result:** —
-
-_Verification not yet performed. Per ADR-006, this sprint cannot be marked Complete until this record is filled in and Result is PASS or PASS WITH CAVEATS._
+**Verified:** 2026-05-22
+**Verified by:** dev@thlabs.dk
+**Environment:** production — https://trout.thlabs.dk
+**Result:** PASS
 
 | # | Checklist item (abbreviated) | Result | Observed |
 |---|------------------------------|--------|----------|
-| 1 | Anonymous → /login redirect | — | — |
-| 2 | Magic-link email received | — | — |
-| 3 | Magic link → / with header | — | — |
-| 4 | Logout → /login | — | — |
-| 5 | THLabs detail page "Open project →" | — | — |
-| 6 | No THLabs session carryover | — | — |
-| 7 | Unauthenticated / → /login | — | — |
-| 8 | STL features work authenticated | — | — |
+| 1 | Anonymous → /login redirect | PASS | Served login interface (title: Havørredloggen, magic-link form present) — confirmed via automated fetch |
+| 2 | Magic-link email received | PASS | Confirmed by manual user verification |
+| 3 | Magic link → / with header | PASS | Confirmed by manual user verification |
+| 4 | Logout → /login | PASS | Confirmed by manual user verification |
+| 5 | THLabs detail page "Open project →" | PASS | Confirmed by manual user verification |
+| 6 | No THLabs session carryover | PASS | Confirmed by manual user verification |
+| 7 | Unauthenticated / → /login | PASS | Served login interface for unauthenticated direct access — confirmed via automated fetch |
+| 8 | STL features work authenticated | PASS | Confirmed by manual user verification |
 
-**Caveats:** —
-**Registry action taken:** —
+**Caveats:** none
+**Registry action taken:** STL `status` set `'development'` → `'live'` in `lib/projects.ts`
 
 ---
 
 ## Sprint Closure
 
-- [ ] All task checkboxes above are checked, or explicitly marked deferred with a reason
-- [ ] Verification Record is filled in and Result is PASS or PASS WITH CAVEATS
-- [ ] Drift reconciliation pass complete
-- [ ] `docs/status.md` Active State and `docs/roadmap.md` updated
-- [ ] `Complete (with caveats)` caveats recorded in roadmap deferred or status.md Accepted Limitations — or: n/a
+- [x] All task checkboxes above are checked, or explicitly marked deferred with a reason
+- [x] Verification Record is filled in and Result is PASS or PASS WITH CAVEATS
+- [x] Drift reconciliation pass complete
+- [x] `docs/status.md` Active State and `docs/roadmap.md` updated
+- [x] `Complete (with caveats)` caveats recorded in roadmap deferred or status.md Accepted Limitations — or: n/a
 
-**Closed:** —
-**Outstanding at close:** —
+**Closed:** 2026-05-22 — Deployment confirmed live at trout.thlabs.dk; all 8 verification checklist items passed; STL status promoted to 'live' in lib/projects.ts.
+**Outstanding at close:** none
