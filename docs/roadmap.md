@@ -10,9 +10,15 @@ The first external project, Sea Trout Log, is registered in the project index wi
 
 ## Current Sprint Focus
 
-Sprint 3 (Sea Trout Log deployment) is the most recently completed sprint. The THLabs registry links to the live STL deployment via `externalUrl`. The Sea Trout Log auth layer and application shell are implemented in the `havorred-log` repository.
+**Sprint 3 — Sea Trout Log External Deployment — `Awaiting Verification`**
 
-Outstanding: confirm Vercel deployment is live and update `status` from `'development'` to `'live'` in `lib/projects.ts`.
+Implementation is complete: the STL auth layer, middleware, login surface, PKCE callback, and layout shell are merged in `havorred-log`; the THLabs registry `externalUrl` points to `https://trout.thlabs.dk`. Code and infrastructure changes are committed.
+
+**Not operationally verified.** The deployment at `trout.thlabs.dk` has not been confirmed reachable and the auth flow has not been exercised. Per ADR-006, this sprint cannot be marked Complete until the Verification Record in the Sprint 3 plan is filled in with a passing result. STL registry `status` remains `'development'` pending a passing verification.
+
+**Sprint 4 — Governance Hardening — `In Progress`**
+
+Adding governance discipline that closes the operational gaps identified by the portability assessment. See `docs/superpowers/specs/2026-05-22-sprint4-governance-hardening-design.md`.
 
 ---
 

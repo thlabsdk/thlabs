@@ -2,6 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
+**Sprint type:** deployment
+**Sprint status:** Awaiting Verification
+
 **Goal:** Add independent auth (magic-link, SSR cookie sessions) to the existing Sea Trout Log app and update the THLabs registry to link to `https://trout.thlabs.dk`.
 
 **Architecture:** `@supabase/ssr` handles cookie-based session management in the `havorred-log` repo; Next.js middleware gates all routes and redirects unauthenticated users to `/login`; a server-component login page plus PKCE callback route complete the auth loop. THLabs gains one changed line.
@@ -821,3 +824,41 @@ These steps happen outside the codebase after the code is complete:
 - [ ] `https://trout.thlabs.dk` has no knowledge of the THLabs session (open in a private window — no THLabs login carries over)
 - [ ] Direct URL access to `/` while unauthenticated redirects to `/login`
 - [ ] Existing STL functionality (catches, spots, bulk ops, AI parse) works when authenticated
+
+---
+
+## Verification Record
+
+**Verified:** —
+**Verified by:** —
+**Environment:** —
+**Result:** —
+
+_Verification not yet performed. Per ADR-006, this sprint cannot be marked Complete until this record is filled in and Result is PASS or PASS WITH CAVEATS._
+
+| # | Checklist item (abbreviated) | Result | Observed |
+|---|------------------------------|--------|----------|
+| 1 | Anonymous → /login redirect | — | — |
+| 2 | Magic-link email received | — | — |
+| 3 | Magic link → / with header | — | — |
+| 4 | Logout → /login | — | — |
+| 5 | THLabs detail page "Open project →" | — | — |
+| 6 | No THLabs session carryover | — | — |
+| 7 | Unauthenticated / → /login | — | — |
+| 8 | STL features work authenticated | — | — |
+
+**Caveats:** —
+**Registry action taken:** —
+
+---
+
+## Sprint Closure
+
+- [ ] All task checkboxes above are checked, or explicitly marked deferred with a reason
+- [ ] Verification Record is filled in and Result is PASS or PASS WITH CAVEATS
+- [ ] Drift reconciliation pass complete
+- [ ] `docs/status.md` Active State and `docs/roadmap.md` updated
+- [ ] `Complete (with caveats)` caveats recorded in roadmap deferred or status.md Accepted Limitations — or: n/a
+
+**Closed:** —
+**Outstanding at close:** —
