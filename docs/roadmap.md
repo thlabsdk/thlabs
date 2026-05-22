@@ -10,9 +10,7 @@ The first external project, Sea Trout Log, is registered in the project index wi
 
 ## Current Sprint Focus
 
-**Sprint 4 — Governance Hardening — `In Progress`**
-
-Adding governance discipline that closes the operational gaps identified by the portability assessment. See `docs/superpowers/specs/2026-05-22-sprint4-governance-hardening-design.md`.
+No active sprint. Sprint 4 closed 2026-05-22.
 
 ---
 
@@ -26,6 +24,7 @@ Adding governance discipline that closes the operational gaps identified by the 
 - **External deployment handoff model** — `externalUrl` in the project registry drives "Open project →" links. Handoff is a URL only — no proxy, no iframe, no shared runtime.
 - **Sea Trout Log auth layer** — Independent Supabase project, middleware auth gate, magic-link login, PKCE callback, header with session identity. Implemented in `havorred-log`.
 - **Sea Trout Log deployment verified** — `trout.thlabs.dk` confirmed live 2026-05-22; all 8 verification items passed; STL `status` promoted to `'live'` in registry.
+- **Governance hardening** — ADR-006 (deployment verification exit conditions), canonical glossary, drift/Accepted Limitations split, startsession profile, THLabs-native portability validation.
 
 ---
 

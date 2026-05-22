@@ -511,11 +511,11 @@ git commit -m "docs: add THLabs-native startsession profile documentation"
 
 ## Sprint Closure
 
-- [ ] All task checkboxes above are checked, or explicitly marked deferred with a reason
-- [ ] Verification Record — **not applicable**: sprint type is `docs/governance`; ADR-006 deployment verification exit condition does not apply
-- [ ] Drift reconciliation pass complete — the only drift item (architecture.md §6) was resolved in Task 3
-- [ ] `docs/status.md` Active State and `docs/roadmap.md` updated
-- [ ] `Complete (with caveats)` caveats recorded in roadmap deferred or status.md Accepted Limitations — or: n/a
+- [x] All task checkboxes above are checked, or explicitly marked deferred with a reason
+- [x] Verification Record — **not applicable**: sprint type is `docs/governance`; ADR-006 deployment verification exit condition does not apply
+- [x] Drift reconciliation pass complete — the only drift item (architecture.md §6) was resolved in Task 3
+- [x] `docs/status.md` Active State and `docs/roadmap.md` updated
+- [x] `Complete (with caveats)` caveats recorded in roadmap deferred or status.md Accepted Limitations — or: n/a
 
-**Closed:** —
-**Outstanding at close:** —
+**Closed:** 2026-05-22 — All 7 tasks completed and committed; ADR-006, glossary, drift reconciliation, Sprint 3 governance artifacts, operational verification, Active State pointer, and startsession profile all in place. Task step checkboxes were not marked in real-time by subagents; completion is evidenced by commits 60696a5–0a3c4e3.
+**Outstanding at close:** none

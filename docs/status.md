@@ -1,7 +1,7 @@
 ## Active State
 
-- **Active sprint:** Sprint 4 — Governance Hardening (`docs/superpowers/specs/2026-05-22-sprint4-governance-hardening-design.md`)
-- **Next action:** Close Sprint 4 — run Sprint Closure checklist in the plan
+- **Active sprint:** none — Sprint 4 closed 2026-05-22
+- **Next action:** Begin Sprint 5 or continue Sea Trout Log feature development in `havorred-log`
 - **Last updated:** 2026-05-22
 
 # Current Status
