@@ -1,3 +1,9 @@
+## Active State
+
+- **Active sprint:** Sprint 4 — Governance Hardening (`docs/superpowers/specs/2026-05-22-sprint4-governance-hardening-design.md`)
+- **Next action:** Close Sprint 4 — run Sprint Closure checklist in the plan
+- **Last updated:** 2026-05-22
+
 # Current Status
 
 ## Deployment
