@@ -112,3 +112,18 @@ The projects page will grow to become the primary surface of THLabs. The design 
 
 **Preserved separation.**
 As the ecosystem grows, the temptation to consolidate will increase. The principle of separate repos and deployments should be actively maintained — not as dogma, but because the cost of coupling across projects consistently outweighs the convenience.
+
+---
+
+## 8. Glossary
+
+| Term | Meaning |
+|------|---------|
+| Sprint | A scoped unit of work with one design spec and one implementation plan. See ADR-005. |
+| ADR | Architecture Decision Record — a numbered, immutable decision in `docs/decisions/`. |
+| Spec | The design intent document for a sprint, in `docs/superpowers/specs/`. Authored and approved before implementation begins. |
+| Plan | The task-by-task implementation breakdown for a sprint, in `docs/superpowers/plans/`. Derived from the spec. |
+| Registry | The project list in `lib/projects.ts` — the only coupling point between THLabs and external projects. See ADR-001. |
+| `ProjectStatus` | Registry status field: `'development'` (built, not verified live), `'active'` (live, ongoing work), `'live'` (verified live and operational), `'archived'` (retired). |
+| Drift | A documented gap where a doc disagrees with reality. Must be reconciled at sprint close. See `docs/status.md` § Known Gaps. |
+| Active State | The canonical "you are here" pointer at the top of `docs/status.md`, naming the active sprint and next action. |
