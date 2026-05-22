@@ -93,10 +93,14 @@ Registry source of truth: `lib/projects.ts`
 
 ## Known Gaps
 
-- Sea Trout Log `status` is `'development'` — not updated to `'live'` pending deployment confirmation
-- `docs/architecture.md` "Current Platform Structure" table only lists the `thlabs` repo and describes Sea Trout Log registration as a future item — this section is now historical
-- No automated health checks or uptime monitoring for either deployment
-- Project metadata is maintained manually in `lib/projects.ts` — no distributed self-description mechanism yet
+### Drift (doc disagrees with reality — must be reconciled at sprint close)
+
+_None currently open._
+
+### Accepted Limitations (no current intent to close)
+
+- No automated health checks or uptime monitoring for either deployment.
+- Project metadata is maintained manually in `lib/projects.ts` — no distributed self-description mechanism yet. See roadmap "Later / Deferred".
 
 ---
 

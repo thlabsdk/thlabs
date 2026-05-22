@@ -87,13 +87,16 @@ Do not design for hypothetical future requirements. Three lines of direct code i
 
 ## 6. Current Platform Structure
 
+Live deployment status is tracked in `docs/status.md`. This section tracks repo/deployment structure only.
+
 | Repo | Purpose | Status |
 |------|---------|--------|
 | `thlabs` | Public shell, project index, auth gateway | Active |
+| `havorred-log` | Sea Trout Log — private catch-logging application | Active |
 
-The `thlabs` repo is a Next.js 16 application. It currently has pages for home, about, projects, and contact. It runs on React 19 with Tailwind CSS 4.
+The `thlabs` repo is a Next.js 16 application. It runs on React 19 with Tailwind CSS 4. It links to `havorred-log` via an `externalUrl` registry entry — no code is shared between them at runtime.
 
-Future projects will be added as separate repositories and linked from the projects index.
+The `havorred-log` repo is independently deployed at `trout.thlabs.dk`. It has its own Supabase project, its own auth boundary, and its own Vercel project.
 
 ---
 
