@@ -2,6 +2,20 @@
 
 This document defines the THLabs-native read order and output format for the `startsession` skill. It replaces the Personal OS default profile for this project.
 
+## Personal OS plugin note
+
+`startsession`/`endsession` are provided by the shared Personal OS plugin (delivered via the
+machine-level `~/.claude/skills/` directory junction, not a local copy), so the Bootstrap
+Precondition (Session Integrity Verification, Personal OS Sprint 0025) runs automatically here
+too — this project's read order and output format below only replace what happens *after* that
+phase.
+
+This profile predates Sprint 0025. Session Integrity's behavior under this project-specific
+profile (in particular whether the checkpoint-consistency check finds a meaningful source, given
+that this profile does not read `docs/sessions/`) has not been verified by an actual
+`/startsession` run since that phase was introduced. This is a known, deliberate follow-up — not
+a defect — to confirm the next time this project is actively worked on.
+
 ## Read order (7 steps)
 
 | Step | File | What to extract | Why |
